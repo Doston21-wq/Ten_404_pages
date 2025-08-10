@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.galaxy-404 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(72px, 20vw, 200px);
+  background: linear-gradient(90deg, #4facfe, #00f2fe, #a18cd1, #fbc2eb);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 8s ease infinite, glowPulse 3s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+  50% { text-shadow: 0 0 30px rgba(255,255,255,0.7); }
+}
+
+/* Yulduzlar animatsiyasi */
+.stars, .stars2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  animation: starMove 100s linear infinite;
+}
+
+.stars {
+  background-image: radial-gradient(white 1px, transparent 1px);
+}
+
+.stars2 {
+  background-image: radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px);
+  animation-duration: 200s;
+}
+
+@keyframes starMove {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-500px, 500px); }
+}
+
+/* Shooting star effect */
+.shooting-star {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(white, transparent);
+  opacity: 0.7;
+  transform: rotate(45deg);
+  animation: shooting 4s ease-in-out infinite;
+}
+
+@keyframes shooting {
+  0% { transform: translate(0,0) rotate(45deg); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translate(-400px, 400px) rotate(45deg); opacity: 0; }
+  100% { opacity: 0; }
+}

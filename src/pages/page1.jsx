@@ -29,11 +29,11 @@ const Page1 = () => {
         </svg>
 
         <h2 className="mt-8 text-2xl md:text-3xl font-semibold text-white tracking-wide glow-text">
-          Sahifa topilmadi
+          Page Not found
         </h2>
 
         <p className="mt-3 max-w-md mx-auto text-gray-300 text-sm md:text-base">
-          Kechirasiz, siz izlagan manzil mavjud emas yoki ko‘chirilgan.
+      Sorry, the address you are looking for does not exist or has been moved.
         </p>
 
         <div className="mt-8 flex justify-center gap-4 flex-wrap">
@@ -41,13 +41,13 @@ const Page1 = () => {
             to="/"
             className="px-6 py-3 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 text-black font-medium shadow-lg transform transition hover:scale-105"
           >
-            ← Bosh sahifaga qaytish
+            return to home page
           </Link>
           <a
             href="#report"
             className="px-6 py-3 rounded-2xl border border-pink-400 text-pink-300 hover:bg-pink-400/20 transition"
           >
-            Muammo haqida xabar berish
+          Report a problem
           </a>
         </div>
       </section>
