@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.neon-404 {
+  font-family: 'Audiowide', sans-serif;
+  font-size: clamp(64px, 15vw, 180px);
+  color: #ff005d;
+  text-shadow:
+    0 0 8px rgba(255, 0, 93, 0.7),
+    0 0 16px rgba(255, 0, 93, 0.6),
+    0 0 32px rgba(255, 0, 93, 0.4),
+    0 0 48px rgba(255, 0, 93, 0.2);
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+/* Glow effect for subheading */
+.glow-text {
+  text-shadow: 0 0 6px rgba(255, 0, 93, 0.4);
+}
+
+/* Stroke animation for SVG line */
+.stroke-anim {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: drawLine 2s ease forwards, strokeFlicker 3s linear 2s infinite;
+}
+
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes strokeFlicker {
+  0%, 100% { stroke-opacity: 1; }
+  50% { stroke-opacity: 0.4; }
+}
+
+/* Orb floating effect */
+.animate-orb {
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+.animate-orb.delay-2000 {
+  animation-delay: 2s;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.25; }
+  50% { transform: translateY(-20px) scale(1.05); opacity: 0.35; }
+}
+
+/* Neon pulse animation */
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 8px rgba(255, 0, 93, 0.7),
+      0 0 16px rgba(255, 0, 93, 0.6),
+      0 0 32px rgba(255, 0, 93, 0.4),
+      0 0 48px rgba(255, 0, 93, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 12px rgba(255, 0, 93, 0.9),
+      0 0 24px rgba(255, 0, 93, 0.8),
+      0 0 48px rgba(255, 0, 93, 0.6),
+      0 0 72px rgba(255, 0, 93, 0.4);
+  }
+}
+
+/* Accessibility - prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .neon-404,
+  .stroke-anim,
+  .animate-orb {
+    animation: none !important;
+  }
+}
