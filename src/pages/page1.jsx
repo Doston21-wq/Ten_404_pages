@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/page1.css"; // animatsiyalar shu faylda
 
-const PageNotFound = () => {
+const Page1 = () => {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-radial from-[#1a0020] via-[#0a0010] to-black relative overflow-hidden">
       
@@ -55,4 +55,4 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
+export default Page1;
